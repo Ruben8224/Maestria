@@ -9,17 +9,18 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override 
+   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple)
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
       initialRoute: 'login',
       routes: {
-        'login': (context) => const Loginpage(),
-        'register': (context) => const Registerpage(),
+        'login': (BuildContext context) => LoginPage(),
+        'register': (BuildContext context) => Registerpage(),
       },
     );
   }
